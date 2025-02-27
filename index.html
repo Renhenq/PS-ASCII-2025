@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <link rel="shortcut icon" type="imagex/png" href="src/assets/images/r.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>My portifolio</title>
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <script defer src="src/js/app.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho da página, apresentando informações pessoais. -->
+    <header>
+        <div class="line"></div>
+        <div class="container-header">
+            <div class="left">
+                <div class="name">
+                    <p class="name-1">Olá, eu sou o </p>
+                    <p class="name-2">Renan Henrique de Oliveira Silveira</p>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="photo">
+                    <img src="src/media/photo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!-- Texto descritivo de apresentação pessoal. -->
+        <div class="about" id="about">
+            <h1>Sobre mim</h1>
+            <div class="about-text">
+                Tenho 21 anos, sou estudante de Ciência da Computação, atualmente no 4º período e gosto de tudo que envolva lógica de programação.
+                Profissionalmente, me interesso pela área de desenvolvimento web e mobile.
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-main">
+
+            <!-- Seção para a apresentação de habilidades técnicas e interpessoais. -->
+            <div class="skills" id="skills">
+
+                <!-- Seção de apresentação de habilidades técnicas, incluindo seu nível de proficiência. -->
+                <div class="tecnical-skills">
+                    <div class="t-skills-title">
+                        Habilidades técnicas
+                    </div>
+                    
+                    <div class="t-skills">
+                        <div class="t-skill">
+                            <h4>HTML</h4>
+                            <img src="src\assets\images\html.png" alt="">
+                            <h5>Intermediário</h4>
+                        </div>
+                        <div class="t-skill">
+                            <h4>CSS</h4>
+                            <img src="src\assets\images\css.png" alt="">
+                            <h5>Intermediário</h4>
+                        </div>
+                        <div class="t-skill">
+                            <h4>Javascript</h4>
+                            <img src="src\assets\images\js.png" alt="">
+                            <h5>Básico</h4>
+                        </div>
+                        <div class="t-skill">
+                            <h4>Java</h4>
+                            <img src="src\assets\images\java.webp" alt="">
+                            <h5>Intermediário</h4>
+                        </div>
+                        <div class="t-skill">
+                            <h4>Python</h4>
+                            <img src="src\assets\images\python.webp" alt="">
+                            <h5>Intermediário</h4>
+                        </div>
+                        <div class="t-skill">
+                            <h4>C</h4>
+                            <img src="src\assets\images\c.png" alt="">
+                            <h5>Intermediário</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção interetiva para apresentação de habilidades interpessoais. Botões laterais alteram o texto de descrição, apresentado como e em quais momentos as habilidades são aplicadas em projetos. Foi utilizada uma função Javascript para a alteração do texto visível e das propriedades visuais do botão. -->
+                <div class="interpersonal-skills">
+                    <div class="i-skills-title">
+                        Habilidades interpessoais
+                    </div>
+                    <div class="i-skills-container">
+                        <div class="i-skills-buttons">
+                            <div class="i-skill" onclick="changeText('Comunicar aos outros membros do projeto novas idéias, dificuldades enfrentadas, opiniões construtivas e, também, estar dispoto a ouvir.', this)">
+                                <div class="i-skill-b">
+                                    Comunicação
+                                    <div class="i-skill-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Arrow">
+                                            <path fill="none" d="M0 0h48v48H0z"></path>
+                                            <path d="m24 8-2.83 2.83L32.34 22H8v4h24.34L21.17 37.17 24 40l16-16z" fill="#ccf381" class="arrow-path"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="i-skill" onclick="changeText('Observar, questionar e encontrar soluções criativas, sem medo de experimentar novas idéias.', this)">
+                                Criatividade
+                                <div class="i-skill-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Arrow">
+                                        <path fill="none" d="M0 0h48v48H0z"></path>
+                                        <path d="m24 8-2.83 2.83L32.34 22H8v4h24.34L21.17 37.17 24 40l16-16z" fill="#ccf381" class="arrow-path"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="i-skill" onclick="changeText('Colaborar com os outros membros do projeto e evitar conflitos, permitindo um concenso entre a equipe e facilitando o desenvolvimento.', this)">
+                                Trabalho em equipe
+                                <div class="i-skill-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Arrow">
+                                        <path fill="none" d="M0 0h48v48H0z"></path>
+                                        <path d="m24 8-2.83 2.83L32.34 22H8v4h24.34L21.17 37.17 24 40l16-16z" fill="#ccf381" class="arrow-path"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="i-skill" onclick="changeText('Manter um ambiente de trabalho organizado, evitando distrações, planejar e definir objetivos e prioridades das tarefas, além de gerenciar o tempo gasto.', this)">
+                                Organização
+                                <div class="i-skill-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Arrow">
+                                        <path fill="none" d="M0 0h48v48H0z"></path>
+                                        <path d="m24 8-2.83 2.83L32.34 22H8v4h24.34L21.17 37.17 24 40l16-16z" fill="#ccf381" class="arrow-path"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="i-skill" onclick="changeText('Pesquisar e questionar se a soluções propostas são suficientemente boas para resolver o problema.', this)">
+                                Pensamento crítico
+                                <div class="i-skill-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="Arrow">
+                                        <path fill="none" d="M0 0h48v48H0z"></path>
+                                        <path class="arrow-path" d="m24 8-2.83 2.83L32.34 22H8v4h24.34L21.17 37.17 24 40l16-16z" fill="#ccf381" ></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Texto inicial -->
+                        <div class="i-skill-text">
+                            <span id="i-skill-text">
+                                Selecione uma habilidade.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de projetos realizados. É possível clicar nos projetos e visualizar uma descrição deste, as tecnologias utilizadas e links para o repositório do projeto ou para a sua visualização. -->
+            <div class="container-projects" id="projects">
+                <div class="projects-title">Projetos</div>
+                <div class="projects">
+                    <div class="project" onclick="openModal('src/media/xmen.png', 
+                    'Seleção de personagens X-Men', 
+                    'Página de seleção de personagens da franquia X-Men desenvolvida durante um evento online.',
+                    ['HTML','CSS','Javascript'],
+                    'https://github.com/Renhenq/x-men',
+                    'https://renhenq.github.io/x-men/')">
+                        <img src="src/media/xmen.png" alt="">
+                        <div class="project-details">
+                            <div class="project-details--text">
+                                <span>Seleção de personagens X-Men</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project"  onclick="openModal('src/media/starbucks.png',
+                    'Landing Page Starbucks', 
+                    'Recriação de um template feito com conteúdo do Starbucks.',
+                    ['HTML', 'CSS'],
+                    'https://github.com/Renhenq/Starbucks',
+                    'https://renhenq.github.io/Starbucks/')">
+                        <img src="src/media/starbucks.png" alt="">
+                        <div class="project-details">
+                            <div class="project-details--text">
+                                <span>Landing Page starbucks</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project"  onclick="openModal('src/media/positivus.png',
+                    'Landing Page Positivus', 
+                    'Recriação de um template feito com conteúdo público do Figma.',
+                    ['HTML', 'CSS'],
+                    'https://github.com/Renhenq/Landing-Positivus',
+                    'https://renhenq.github.io/Landing-Positivus/')">
+                        <img src="src/media/positivus.png" alt="">
+                        <div class="project-details">
+                            <div class="project-details--text"> 
+                                <span>Landing Page Positivus</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project"  onclick="openModal('src/media/awax.png',
+                    'Landing Page Awax', 
+                    'Recriação de um template feito durante um curso online.',
+                    ['HTML', 'CSS'],
+                    'https://github.com/Renhenq/Awax',
+                    'https://renhenq.github.io/Awax/')">
+                        <img src="src/media/awax.png" alt="">
+                        <div class="project-details">
+                            <div class="project-details--text"> 
+                                <span>Landing Page Awax</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project"  onclick="openModal('src/media/furniro.png',
+                    'Landing Page Furniro', 
+                    'Recriação de um template de uma loja online feito com conteúdo público do Figma.',
+                    ['HTML', 'CSS'],
+                    'https://github.com/Renhenq/Landing-Furniro',
+                    'https://renhenq.github.io/Landing-Furniro/')">
+                        <img src="src/media/furniro.png" alt="">
+                        <div class="project-details">
+                            <div class="project-details--text"> 
+                                <span>Landing Page Furniro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project"  onclick="openModal('src/media/busca.png',
+                    'Busca e árvore binária', 
+                    'Desenvolvimento de um programa em linguagem C que permite armazenar dados de candidatos do Brasil e realizar buscas por meio de buscas binárias, árvores binárias ou árvores AVL..',
+                    ['C'],
+                    'https://github.com/Renhenq/Trabalho-Final-AED2',
+                    'https://replit.com/@renanhenriq2020/trabalhofinalAED2')">
+                        <img src="src/media/arvore.png" alt="">
+                        <div class="project-details">
+                            <div class="project-details--text"> 
+                                <span>Busca de candidatos eleitorais</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para apresentação detalhada do projeto com links para acesso do repositório e de visualização do projeto. Fechado quando se clica fora dele, utilizando Javascript -->
+            <div id="modal" class="modal">
+                <div class="modal-container">
+                    <span class="close" onclick="closeModal()">&times;</span> <!-- Botão para fechar -->
+                    <div class="modal-content">
+                        <img id="modal-img" src="" alt="">
+
+                        <div class="modal-infos">
+                            <h2 id="modal-title" class="modal-title"></h2>
+                            <p id="modal-desc" class="modal-desc"></p>
+                            <p id="modal-tecs" class="modal-tecs"></p>
+                            <div class="modal-buttons">
+                                <a id="modal-link-rep" class="modal-link" href="" target="_blank">Abrir repositório</a>
+                                <a id="modal-link-project" class="modal-link" href="" target="_blank">Ver projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de mensagem, contato e redes -->
+            <div class="contact" id="contact">
+                <div class="contact-title">
+                    Entre em contato comigo!
+                </div>
+
+                <!-- Formulário de contato para envio de e-mail -->
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form action="" method="POST" target="_blank">
+                            <div class="form-row">
+                                <div class="form-name">
+                                    <label for="name">Seu nome</label>
+                                    <input type="text" id="name" data-placeholder="Digite seu nome" placeholder="Digite seu nome">
+                                </div>
+                                <div class="form-email">
+                                    <label for="email">Seu e-mail</label>
+                                    <input type="text" id="email" data-placeholder="Digite seu e-mail" placeholder="Digite seu e-mail">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-text">
+                                    <label for="text">Digite sua mensagem</label>
+                                    <textarea name="text" data-placeholder="Digite sua mensagem aqui" placeholder="Digite sua mensagem aqui" id="text"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Seção de contato com links de e-mail e redes sociais -->
+                <div class="contact-links">
+                    <div class="contact-link">
+                        <a href="mailto:renanhenriq2020@outlook.com" target="_blank">
+                            <div class="contact-img">
+                                <img src="src/assets/images/email.png" alt="">
+                            </div>
+                            <div class="contact-link-name">
+                                <p>E-mail</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-link">
+                        <a href="https://www.linkedin.com/in/renan-henrique-silveira-149824289/" target="_blank">
+                            <div class="contact-img">
+                                <img src="src/assets/images/linkedin.png" alt="">
+                            </div>
+                            <div class="contact-link-name">
+                                <p>LinkedIn</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-link">
+                        <a href="https://github.com/Renhenq" target="_blank">
+                            <div class="contact-img">
+                                <img src="src/assets/images/github.png" alt="">
+                            </div>
+                            <div class="contact-link-name">
+                                <p>GitHub</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <!-- menu de navegação para seções do site -->
+                <nav>
+                    <ul>
+                        <li><a href="#about">Sobre mim</a></li>
+                        <li><a href="#skills">Habilidades</a></li>
+                        <li><a href="#projects">Meus projetos</a></li>
+                        <li><a href="#contact">Contatos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer-copyright">
+                &copy; Renan Silveira 2025. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
