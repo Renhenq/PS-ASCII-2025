@@ -43,3 +43,48 @@ function changeText(text, element){
     // Armazena o botão mais recente.
     skill = element;
 }
+
+
+// Verifica se os campos do formulário estão preenchidos e, caso sim, mostra mensagem de que o e-mail foi enviado, limpa
+// os campos do formulário e faz o envio. Caso contrário, informa de que os campos devem ser todos preenchidos.
+function sendEmail(){
+    if (
+        document.getElementById("email-userName").value.trim() === '' ||
+        document.getElementById("email-userEmail").value.trim() === '' ||
+        document.getElementById("email-content").value.trim() === ''
+    ) { 
+        emailAlert("Preencha todos os campos do formulário.");
+    } else {
+        emailAlert("E-mail enviado!");
+        document.getElementById("email-userName").value = null;
+        document.getElementById("email-userEmail").value = null;
+        document.getElementById("email-content").value = null;
+
+        document.getElementById("form").submit();
+    }
+}
+
+
+// Cria um elemento com uma mensagem caso clique no botão do formulário. Exibe por apenas 4 segundos.
+function emailAlert(msg) {
+    const message = document.createElement("div");
+    message.textContent = msg;
+    message.style.position = "fixed";
+    message.style.bottom = "10%";
+    message.style.left = "50%";
+    message.style.transform = "translateX(-50%)";
+    message.style.backgroundColor = "#000";
+    message.style.color = "#FFF";
+    message.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
+    message.style.padding = "10px 20px";
+    message.style.borderRadius = "5px";
+    message.style.fontSize = "16px";
+
+    // Adiciona o elemento da div na página.
+    document.body.appendChild(message);
+    
+    // Remove após 4 segundos.
+    setTimeout(() => {
+        message.remove();
+    }, 4000);
+}

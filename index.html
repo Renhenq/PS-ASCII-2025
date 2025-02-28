@@ -264,28 +264,32 @@
                     Entre em contato comigo!
                 </div>
 
-                <!-- Formulário de contato para envio de e-mail -->
+                <!-- Formulário de contato para envio de e-mail.
+                O envio do formulário não está funcional.
+                Ao clicar no botão, com uma função Javascript, é verificado se todos os campos foram preenchidos e caso sim,
+                seria feito o envio do e-mail. Uma mensagem aparece na tela para informar o usuário se foi feito o envio
+                ou se os campos não estão devidamente preenchidos. -->
                 <div class="contact-content">
                     <div class="contact-form">
-                        <form action="" method="POST" target="_blank">
+                        <form action="" method="POST" id="form" target="_blank">
                             <div class="form-row">
                                 <div class="form-name">
                                     <label for="name">Seu nome</label>
-                                    <input type="text" id="name" data-placeholder="Digite seu nome" placeholder="Digite seu nome">
+                                    <input type="text" id="email-userName" data-placeholder="Digite seu nome" placeholder="Digite seu nome">
                                 </div>
                                 <div class="form-email">
                                     <label for="email">Seu e-mail</label>
-                                    <input type="text" id="email" data-placeholder="Digite seu e-mail" placeholder="Digite seu e-mail">
+                                    <input type="text" id="email-userEmail" data-placeholder="Digite seu e-mail" placeholder="Digite seu e-mail">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-text">
                                     <label for="text">Digite sua mensagem</label>
-                                    <textarea name="text" data-placeholder="Digite sua mensagem aqui" placeholder="Digite sua mensagem aqui" id="text"></textarea>
+                                    <textarea name="text" data-placeholder="Digite sua mensagem aqui" placeholder="Digite sua mensagem aqui" id="email-content"></textarea>
                                 </div>
                             </div>
                             <div class="form-button">
-                                <button type="submit">Enviar</button>
+                                <button type="button" onclick="sendEmail()">Enviar</button>
                             </div>
                         </form>
                     </div>
